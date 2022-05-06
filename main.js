@@ -117,7 +117,6 @@
 
 
 
-const photoContainer = document.getElementById('img-container');
 let apiKey = '1bc973599b551367a6101e6cd43ac18a';
 let tag = 'reptile';
 let apiURL = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${tag}&format=json&nojsoncallback=1`
@@ -126,6 +125,7 @@ let randomPhoto = Math.floor(Math.random() * 30);
 async function getData () {
   const response = await fetch(apiURL);
   let data = await response.json();
+  const photoContainer = document.getElementById('img-container');
 
   let id = data.photos.photo[randomPhoto].id;
   let secret = data.photos.photo[randomPhoto].secret;
@@ -133,5 +133,7 @@ async function getData () {
   const image = document.getElementById('image');
   image.src = `https://live.staticflickr.com/${server}/${id}_${secret}.jpg`;
 
-
+  const caption = document.getElementById('photo-caption');
+  caption.innerHTML = ('Photo Title: ' + data.photos.photo[randomPhoto].title);
+  
 }
