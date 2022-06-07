@@ -117,12 +117,12 @@
 
 
 
-let apiKey = '1bc973599b551367a6101e6cd43ac18a';
-let tag = 'reptile';
-let apiURL = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${tag}&format=json&nojsoncallback=1`
-let randomPhoto = Math.floor(Math.random() * 30);
 
-async function getData () {
+async function getData (tag) {
+  let apiKey = '1bc973599b551367a6101e6cd43ac18a';
+  let apiURL = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${tag}&format=json&nojsoncallback=1`
+  let randomPhoto = Math.floor(Math.random() * 30);
+
   const response = await fetch(apiURL);
   let data = await response.json();
   const photoContainer = document.getElementById('img-container');

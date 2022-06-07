@@ -12,7 +12,14 @@
   <section id="header-section">
     <h1>Welcome to ReptiWorld!</h1>
     <h3><i>Find a reptile</i></h3>
-    <button class="search-button" type="submit" onclick="getData()">Random</button>
+    <button class="search-button" id="main-search" type="submit" onclick="getData('reptile')">Random</button>
+  </section>
+  <section id="button-section">
+    <button class="search-button" id="button1" type="submit" onclick="getData('lizard')">Lizards</button>
+    <button class="search-button" id="button2" type="submit" onclick="getData('frog')">Frogs</button>
+    <button class="search-button" id="button3" type="submit" onclick="getData('turtle')">Turtles</button>
+    <button class="search-button" id="button4" type="submit" onclick="getData('tortoise')">Tortoises</button>
+    <button class="search-button" id="button5" type="submit" onclick="getData('snake')">Snakes</button>
   </section>
   <section id="img-container">
     <img id="image" src="" alt="">

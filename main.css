@@ -8,6 +8,12 @@ body {
   min-height: 100vh;
 }
 
+button {
+  cursor: pointer;
+  border-color: lightsteelblue;
+  padding: 10px;
+}
+
 #header-section,
 #img-container {
   margin: auto;
@@ -20,15 +26,50 @@ body {
 }
 
 #header-section>h3 {
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 24px;
 }
 
 .search-button {
-  margin-top: 20px;
   font-size: 18px;
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 5px;
+}
+.search-button#main-search {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+#button-section {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin: 20px auto;
+}
+
+#button1 {
+  border-color: lightgreen;
+  width: 100px;
+}
+
+#button2 {
+  border-color: limegreen;
+  width: 100px;
+}
+
+#button3 {
+  border-color: lightblue;
+  width: 100px;
+}
+
+#button4 {
+  border-color: lightsalmon;
+  width: 100px;
+}
+
+#button5 {
+  border-color: lightcoral;
+  width: 100px;
 }
 
 #image {
